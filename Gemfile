@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem "erb2haml", "~> 0.1.5"
 gem "pry-rails", "~> 0.3.6"
 gem "rails-ujs", "~> 0.1.0"
+gem "haml-rails", "~> 1.0.0"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
