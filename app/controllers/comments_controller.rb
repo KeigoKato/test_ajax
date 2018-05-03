@@ -2,7 +2,11 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    @comment.save
+    if @comment.save
+      respond_to do |format|
+        format.html{redirect_to "/posts/#{params[:post_id]}"}
+      end
+    end
   end
 
   private

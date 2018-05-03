@@ -10,7 +10,8 @@
 = link_to 'Back', posts_path
 
 %div
-  = render "comments", comments: @comments
+  #comments_area
+    = render "comments", comments: @comments
 
 %div
   = form_for [@post, @comment] do |f|
