@@ -17,7 +17,8 @@
     // 変数は部分テンプレートの名前と同じ
 
 %div
-  = form_for [@post, @comment], remote: true do |f|
+  -# = form_for [@post, @comment], remote: true do |f|  #js.erbを使ったajaxはこっち
+  = form_for [@post, @comment] do |f|  #js内に直接ajaxリクエストする場合はこっち
     %h4 Write a comment
     = f.label :nickname
     = f.text_field :nickname, id: "nickname_field"
