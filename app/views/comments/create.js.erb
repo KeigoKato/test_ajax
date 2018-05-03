@@ -1,0 +1,6 @@
+$("#nickname_field").val("");
+$("#comment_field").val("");
+
+$("#comments").html(
+  "<%= j(render partial: "posts/comment", collection: @post.comments) %>"
+);

@@ -1,6 +1,6 @@
 %div
-  %h2 コメント一覧
-  - comments.each do |comment|
+  -# - comments.each do |comment|
+  - if comment.nickname.present?
     %h5 nickname
     %p
       = comment.nickname

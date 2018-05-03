@@ -11,7 +11,9 @@
 
 %div
   #comments
-    = render "comments", comments: @comments
+    = render partial: "posts/comment", collection: @post.comments
+    // partialをつける場合はcollectionをつける
+    // 変数は部分テンプレートの名前と同じ
 
 %div
   = form_for [@post, @comment], remote: true do |f|
