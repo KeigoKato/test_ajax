@@ -5,8 +5,11 @@ class CommentsController < ApplicationController
     comment = Comment.new(comment_params)
     if comment.save
       # #redirect_toがあるとjsを呼び出すことができない
+      # #通常のhtmlリクエストを行う場合はhtmlをフォーマットに指定する必要がある
+      # #json形式の場合はjsonをフォーマットに指定する
       respond_to do |format|
         format.html{redirect_to "/posts/#{params[:post_id]}"}
+        format.json
       end
     end
   end
