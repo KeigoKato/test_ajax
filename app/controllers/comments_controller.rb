@@ -2,8 +2,8 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    comment = Comment.new(comment_params)
-    if comment.save
+    @comment = Comment.new(comment_params)  #jbuilderにわたすためにインスタンス変数にする必要がある。
+    if @comment.save
       # #redirect_toがあるとjsを呼び出すことができない
       # #通常のhtmlリクエストを行う場合はhtmlをフォーマットに指定する必要がある
       # #json形式の場合はjsonをフォーマットに指定する
