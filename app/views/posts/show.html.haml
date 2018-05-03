@@ -9,8 +9,6 @@
 |
 = link_to 'Back', posts_path
 
-
-
 %div
   = render "comments", comments: @comments
 
@@ -21,4 +19,4 @@
     = f.text_field :nickname
     = f.label :comment
     = f.text_area :comment
-    = f.submit "コメント"
+    = f.submit "コメントする"

@@ -2,9 +2,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    binding.pry
-    if @comment.save
-    end
+    @comment.save
   end
 
   private

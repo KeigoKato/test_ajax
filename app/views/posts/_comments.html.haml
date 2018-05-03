@@ -1,6 +1,9 @@
 %div
+  %h2 コメント一覧
   - comments.each do |comment|
+    %h5 nickname
     %p
       = comment.nickname
+    %h5 comment
     %p
       = comment.comment
