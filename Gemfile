@@ -18,7 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem "jquery-rails", "~> 4.3.1"
 gem "erb2haml", "~> 0.1.5"
 gem "pry-rails", "~> 0.3.6"
-gem "rails-ujs", "~> 0.1.0"
+gem "rails-ujs", "~> 0.1.0"   #rails-ujsはなくてもいいんじゃないの？application.jsに=require rails-ujsを書けばいいんじゃない？
 gem "haml-rails", "~> 1.0.0"
 
 group :development, :test do
