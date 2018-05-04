@@ -2,12 +2,13 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    comment = Comment.new(comment_params)
-    if comment.save
+    @comment = Comment.new(comment_params)
+    if @comment.save
       # #redirect_toがあるとjsを呼び出すことができない
-      # respond_to do |format|
-      #   format.html{redirect_to "/posts/#{params[:post_id]}"}
-      # end
+      respond_to do |format|
+        format.html{redirect_to "/posts/#{params[:post_id]}"}
+        format.json{render json: @comment}
+      end
     end
   end
 
